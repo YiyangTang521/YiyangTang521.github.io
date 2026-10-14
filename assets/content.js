@@ -60,6 +60,47 @@ window.SITE_CONTENT = {
    */
   publications: [
     {
+      "title": "A LiDAR Odometry with Visual Semantic Segmentation-Assisted Dynamic Object Removal",
+      "authors": [
+        "Yiyang Tang",
+        "Runbo Guo",
+        "Yichen Yu",
+        "Hanxuan Zhang"
+      ],
+      "highlightAuthor": "Yiyang Tang",
+      "venue": "3rd International Conference on Electronic Engineering and Information Systems (EEiSS)",
+      "year": "2026",
+      "topic": "LiDAR Odometry",
+      "description": "Visual semantic segmentation and two-stage verification remove dynamic points missed by LiDAR detection while preserving valid static measurements.",
+      "project": "visual-semantic-lo/",
+      "preview": "visual-semantic-lo/assets/long-range.png",
+      "previewAlt": "Figure 1(b): visual segmentation identifies a distant vehicle and its dynamic LiDAR points missed by 3D detection.",
+      "figures": [
+        {
+          "image": "visual-semantic-lo/assets/large-occlusion.png",
+          "caption": "Figure 1(a)",
+          "imageAlt": "Figure 1(a): visual segmentation identifies a large nearby vehicle and removes missed dynamic points, shown in red.",
+          "width": 603,
+          "height": 408
+        }
+      ],
+      "links": [
+        {
+          "label": "Project page",
+          "url": "visual-semantic-lo/"
+        },
+        {
+          "label": "PDF",
+          "url": "visual-semantic-lo/assets/paper.pdf"
+        },
+        {
+          "label": "IEEE",
+          "url": "https://ieeexplore.ieee.org/document/11584613"
+        }
+      ],
+      "bibtex": "@inproceedings{tang2026lidar,\n  author    = {Tang, Yiyang and Guo, Runbo and Yu, Yichen and\n               Zhang, Hanxuan},\n  title     = {A {LiDAR} Odometry with Visual Semantic\n               Segmentation-Assisted Dynamic Object Removal},\n  booktitle = {2026 3rd International Conference on Electronic\n               Engineering and Information Systems (EEISS)},\n  year      = {2026},\n  pages     = {1--6},\n  doi       = {10.1109/EEISS69782.2026.11584613}\n}"
+    },
+    {
       title: "CAMSCKF: A Multi-State Constraint Kalman Filter with Adaptive Multivariate Noise Parameters Clustering and Estimation for Visual-Inertial Odometry",
       authors: ["Yiyang Tang", "Hanxuan Zhang", "Yichen Yu", "Xiaofeng Li", "Yulong Huang"],
       highlightAuthor: "Yiyang Tang",
