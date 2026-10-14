@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CAMSCKF: adaptive measurement clustering and multivariate noise estimation for visual-inertial odometry. IROS 2025, Harbin Engineering University.">
+  <meta name="author" content="Yiyang Tang, Hanxuan Zhang, Yichen Yu, Xiaofeng Li, Yulong Huang">
+  <meta property="og:title" content="CAMSCKF · IROS 2025">
+  <meta property="og:description" content="A Multi-State Constraint Kalman Filter with Adaptive Multivariate Noise Parameters Clustering and Estimation for Visual-Inertial Odometry.">
+  <meta property="og:type" content="website">
+  <meta name="citation_title" content="CAMSCKF: A Multi-State Constraint Kalman Filter with Adaptive Multivariate Noise Parameters Clustering and Estimation for Visual-Inertial Odometry">
+  <meta name="citation_author" content="Yiyang Tang">
+  <meta name="citation_author" content="Hanxuan Zhang">
+  <meta name="citation_author" content="Yichen Yu">
+  <meta name="citation_author" content="Xiaofeng Li">
+  <meta name="citation_author" content="Yulong Huang">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)">
+  <meta name="citation_firstpage" content="15173">
+  <meta name="citation_lastpage" content="15180">
+  <meta name="citation_doi" content="10.1109/IROS60139.2025.11246963">
+  <meta name="theme-color" content="#ffffff">
+  <title>CAMSCKF · IROS 2025</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="project.css">
+  <script src="project.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="project-nav" aria-label="Project navigation">
+    <a class="home-link" href="../#publications"><span aria-hidden="true">←</span> Yiyang Tang</a>
+    <div class="section-links"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#simulation">Simulation</a><a href="#results">Results</a><a href="#citation">BibTeX</a></div>
+  </nav>
+
+  <main id="main">
+    <header class="hero">
+      <p class="venue">IROS 2025</p>
+      <h1><span class="project-name">CAMSCKF</span><span class="project-title">A Multi-State Constraint Kalman Filter with Adaptive Multivariate Noise Parameters Clustering and Estimation for Visual-Inertial Odometry</span></h1>
+      <p class="authors"><span><a href="../">Yiyang Tang</a><sup>*</sup></span><span>Hanxuan Zhang<sup>*</sup></span><span>Yichen Yu<sup>*</sup></span><span>Xiaofeng Li</span><span>Yulong Huang<sup>†</sup></span></p>
+      <p class="affiliation">Harbin Engineering University</p>
+      <p class="author-notes"><sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author</p>
+      <div class="resource-links" aria-label="Paper resources">
+        <a href="assets/paper.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h8"/></svg>Paper PDF</a>
+        <a href="https://ieeexplore.ieee.org/document/11246963" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-11 11M10 5H3v16h16v-7"/></svg>IEEE Xplore</a>
+        <a href="#video"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m10 8 6 4-6 4z"/></svg>Video</a>
+        <a href="#citation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg>BibTeX</a>
+      </div>
+    </header>
+
+    <section id="video" class="video-section wide" aria-labelledby="video-heading">
+      <h2 id="video-heading" class="sr-only">Video presentation and experimental demonstration</h2>
+      <figure>
+        <video id="paper-video" controls playsinline preload="metadata" poster="assets/demo-poster.jpg" width="1908" height="1074" aria-label="CAMSCKF video presentation and experimental demonstration">
+          <source src="assets/demo.mp4" type="video/mp4">
+          Your browser does not support this video. <a href="assets/demo.mp4">Download the video</a>.
+        </video>
+        <figcaption class="video-caption"><span>Full presentation and experimental demonstration · 1 min 39 s</span><span class="video-actions"><button type="button" id="jump-to-demo" hidden>Jump to experiments <span aria-hidden="true">↗</span></button><a href="assets/demo.mp4" download>Download video</a></span></figcaption>
+      </figure>
+      <p id="video-status" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="abstract" class="text-section" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading">Abstract</h2>
+      <p>Visual-inertial odometry in outdoor environments must handle visual measurements with different noise levels, caused by changes in viewing distance, perspective, illumination, and texture. <strong>CAMSCKF</strong> augments the Multi-State Constraint Kalman Filter with adaptive measurement clustering and per-cluster noise estimation. It groups measurements using their innovations, models the joint state and noise parameters with a Gaussian–Multivariate Generalized Inverse Gaussian distribution, and updates the state and cluster-specific noise covariances online. Simulations and UZH-FPV outdoor experiments evaluate the method under heterogeneous, time-varying noise and aggressive motion.</p>
+    </section>
+
+    <section id="method" class="wide content-section" aria-labelledby="method-heading">
+      <h2 id="method-heading">Method overview</h2>
+      <p class="section-intro">Adapt the noise model to the measurements, then use that model to improve the visual-inertial state estimate.</p>
+      <figure class="framework-figure">
+        <a href="assets/framework.png" target="_blank" rel="noopener noreferrer" aria-label="Open the CAMSCKF framework figure at full resolution"><img src="assets/framework.png" alt="CAMSCKF framework: IMU and visual features feed a joint prior update, chi-square pre-clustering and EM-based adaptive measurement clustering, followed by a joint posterior update." width="2390" height="598" loading="lazy" decoding="async"></a>
+        <figcaption>Framework from Fig. 2 of the paper. Click any figure to view it at full resolution.</figcaption>
+      </figure>
+      <ol class="method-steps">
+        <li><h3>Cluster measurements</h3><p>Chi-square pre-clustering and an EM-based stepwise procedure group measurements according to their innovations.</p></li>
+        <li><h3>Track distinct noise levels</h3><p>A joint state and noise model estimates separate covariance coefficients for different measurement clusters.</p></li>
+        <li><h3>Update the state</h3><p>An analytical joint posterior update couples the visual-inertial state estimate with online noise adaptation.</p></li>
+      </ol>
+    </section>
+
+    <section id="simulation" class="wide content-section" aria-labelledby="simulation-heading">
+      <h2 id="simulation-heading">Simulation</h2>
+      <div class="simulation-description">
+        <p>We simulate a robot moving in a circle in the x–y plane while oscillating vertically, with randomly generated visual feature points. The IMU runs at <strong>100 Hz</strong> and the camera at <strong>10 Hz</strong>. Each run lasts <strong>300 seconds</strong> (30,000 steps), and all methods are evaluated over <strong>50 Monte Carlo runs</strong>.</p>
+        <p>Visual measurements have two distinct, time-varying Gaussian noise variances, with a nominal noise model that does not match the actual noise. CAMSCKF is compared with Tra-MSCKF, VB-MSCKF, HKF, and ANGIG-KF using position and orientation RMSE.</p>
+      </div>
+      <div class="simulation-figures">
+        <figure><a href="assets/simulation-noise.png" target="_blank" rel="noopener noreferrer" aria-label="Open the simulation noise-estimation curves"><img src="assets/simulation-noise.png" alt="Simulation noise estimation from Figure 4(b): CAMSCKF tracks two distinct, time-varying pixel-error standard deviations, compared with the single estimate of ANGIG-KF." width="792" height="672" loading="lazy" decoding="async"></a><figcaption>Fig. 4(b) · True and estimated measurement noise.</figcaption></figure>
+        <figure><a href="assets/simulation-errors.png" target="_blank" rel="noopener noreferrer" aria-label="Open the simulation position and orientation RMSE curves"><img src="assets/simulation-errors.png" alt="Position and orientation RMSE curves for Tra-MSCKF, ANGIG-KF, VB-MSCKF, HKF, and CAMSCKF over the 300-second simulation." width="896" height="827" loading="lazy" decoding="async"></a><figcaption>Fig. 4(c) · Position and orientation RMSE.</figcaption></figure>
+      </div>
+      <p class="simulation-summary">The noise estimates track the two changing noise levels separately. In this simulation, CAMSCKF reduces position and orientation errors relative to the comparison methods when measurement noise is heterogeneous and the nominal model is mismatched.</p>
+    </section>
+
+    <section id="results" class="wide content-section results-section" aria-labelledby="results-heading">
+      <h2 id="results-heading">Experiments</h2>
+      <p class="section-intro">Evaluation on four UZH-FPV outdoor sequences, using a shared KLT front end, RANSAC outlier rejection, and Sim(3) trajectory alignment.</p>
+      <div class="metrics" aria-label="CAMSCKF average results from Table II">
+        <div><strong>0.978 <span>m</span></strong><span>Mean trajectory error</span></div>
+        <div><strong>1.658<span>°</span></strong><span>Mean orientation error</span></div>
+        <div><strong>7.2 <span>ms</span></strong><span>Mean reported runtime</span></div>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Comparison of average trajectory and orientation errors">
+        <table>
+          <caption>Average errors across the four tested sequences, reproduced from Table II. Lower is better.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">ATE (m) <span aria-hidden="true">↓</span></th><th scope="col">AOE (°) <span aria-hidden="true">↓</span></th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Tra-MSCKF</th><td>1.914</td><td>4.138</td></tr>
+            <tr><th scope="row">VB-MSCKF</th><td>1.458</td><td>2.971</td></tr>
+            <tr><th scope="row">HKF</th><td>1.347</td><td>2.980</td></tr>
+            <tr><th scope="row">ANGIG-KF</th><td>1.457</td><td>2.578</td></tr>
+            <tr class="ours"><th scope="row">CAMSCKF (ours)</th><td><strong>0.978</strong></td><td><strong>1.658</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">ATE: Absolute Trajectory Error. AOE: Absolute Orientation Error. Runtime is the value reported in the paper’s evaluation setting.</p>
+      <div class="trajectory-grid">
+        <figure><a href="assets/trajectory-easy.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Outdoor forward 1 trajectory comparison"><img src="assets/trajectory-easy.png" alt="Trajectory comparison on Outdoor forward 1, showing ground truth and five evaluated methods with enlarged local details." width="950" height="921" loading="lazy" decoding="async"></a><figcaption><strong>Outdoor forward 1 · Easy</strong><br>Trajectory comparison from Fig. 5(a).</figcaption></figure>
+        <figure><a href="assets/trajectory-hard.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Outdoor forward 5 trajectory comparison"><img src="assets/trajectory-hard.png" alt="Trajectory comparison on Outdoor forward 5, with an enlarged view of the deviations between estimated trajectories and ground truth." width="809" height="868" loading="lazy" decoding="async"></a><figcaption><strong>Outdoor forward 5 · Hard</strong><br>Trajectory comparison from Fig. 5(c).</figcaption></figure>
+      </div>
+      <div class="noise-result">
+        <figure><a href="assets/noise-estimation.png" target="_blank" rel="noopener noreferrer" aria-label="Open the estimated measurement noise plot"><img src="assets/noise-estimation.png" alt="Estimated pixel-error standard deviations on Outdoor forward 5: CAMSCKF tracks three representative noise levels, while ANGIG-KF estimates a single noise level." width="851" height="798" loading="lazy" decoding="async"></a><figcaption>Online noise estimation from Fig. 5(e).</figcaption></figure>
+        <div><h3>Different features, different uncertainty</h3><p>The estimated standard deviations illustrate how CAMSCKF tracks distinct measurement noise levels over time. This allows separate adaptation for measurement clusters with different noise characteristics.</p><p>The plot shows representative cluster estimates on the challenging Outdoor forward 5 sequence.</p></div>
+      </div>
+    </section>
+
+    <section id="citation" class="text-section citation-section" aria-labelledby="citation-heading">
+      <div class="citation-heading"><h2 id="citation-heading">BibTeX</h2><button type="button" id="copy-citation" hidden>Copy citation</button></div>
+      <pre id="bibtex" tabindex="0">@inproceedings{tang2025camsckf,
+  author    = {Tang, Yiyang and Zhang, Hanxuan and Yu, Yichen and
+               Li, Xiaofeng and Huang, Yulong},
+  title     = {{CAMSCKF}: A Multi-State Constraint Kalman Filter
+               with Adaptive Multivariate Noise Parameters
+               Clustering and Estimation for Visual-Inertial Odometry},
+  booktitle = {2025 IEEE/RSJ International Conference on
+               Intelligent Robots and Systems (IROS)},
+  year      = {2025},
+  pages     = {15173--15180},
+  doi       = {10.1109/IROS60139.2025.11246963}
+}</pre>
+      <p class="citation-actions"><a href="assets/citation.bib" download>Download .bib</a><span id="copy-status" role="status" aria-live="polite"></span></p>
+    </section>
+  </main>
+  <footer class="project-footer"><a href="../#publications">← Back to Yiyang Tang’s homepage</a><p>CAMSCKF · IROS 2025 · Harbin Engineering University</p></footer>
+</body>
+</html>
