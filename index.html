@@ -3,192 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yiyang Tang is a PhD student at Harbin Engineering University, researching robotic perception, SLAM, and safe navigation in dynamic environments.">
-  <meta property="og:title" content="Yiyang Tang · Academic Homepage">
-  <meta property="og:description" content="PhD Student at Harbin Engineering University. Robotic perception, SLAM, and navigation in dynamic environments.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Robust visual–inertial odometry designed for challenging environments with multiple concurrent disturbances, including illumination changes, motion blur, and texture variations. Unpublished work under second-round review.">
+  <meta property="og:title" content="Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning">
+  <meta property="og:description" content="Robust visual–inertial odometry designed for challenging environments with multiple concurrent disturbances, including illumination changes, motion blur, and texture variations. Under second-round review at IEEE Transactions on Robotics.">
   <meta property="og:type" content="website">
-  <meta name="author" content="Yiyang Tang">
   <meta name="theme-color" content="#ffffff">
-  <title>Yiyang Tang · Academic Homepage</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/content.js" defer></script>
-  <script src="assets/site.js" defer></script>
-  <script src="assets/preview.js" defer></script>
+  <title>Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden><span>Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-        <a class="active" href="#about" aria-current="location">About Me</a>
-        <a href="#research">Research</a>
-        <a href="#news" hidden>News</a>
-        <a href="#publications">Publications</a>
-        <a href="#under-review">Under Review</a>
-        <a href="#submit-soon">Submit Soon</a>
-        <a href="#services">Services and Activities</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="page-layout">
-    <aside class="profile" aria-label="Personal profile">
-      <div class="portrait-wrap">
-        <div class="portrait-placeholder" id="portrait-placeholder" role="img" aria-label="Yiyang Tang monogram" hidden>
-          <span class="portrait-monogram" id="portrait-monogram">YT</span>
-        </div>
-        <img id="portrait" class="portrait" src="assets/github-avatar.jpg" alt="Yiyang Tang’s GitHub avatar" width="200" height="200" decoding="async">
+  <nav class="project-nav" aria-label="Project navigation">
+    <a class="home-link" href="../#under-review"><span aria-hidden="true">←</span> Yiyang Tang</a>
+    <div class="section-links"><a href="#video">Video</a><a href="#scenes">Scenes</a></div>
+  </nav>
+  <main id="main">
+    <header class="hero">
+      <h1>Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning</h1>
+      <p class="authors"><strong>Yiyang Tang</strong>, Hanxuan Zhang, Yiming Chen, Xiaofeng Li, Chao Xue and Yulong Huang</p>
+      <p class="project-subtitle">Robust visual–inertial odometry designed for challenging environments with multiple concurrent disturbances, including illumination changes, motion blur, and texture variations.</p>
+      <p class="affiliation">Harbin Engineering University</p>
+      <p class="review-status">Second-round review · IEEE Transactions on Robotics</p>
+      <p class="preview-note">Unpublished work</p>
+    </header>
+    <section id="video" class="wide video-section" aria-labelledby="video-heading">
+      <h2 id="video-heading" class="sr-only">Outdoor experimental video</h2>
+      <video controls playsinline preload="metadata" poster="assets/demo-poster.jpg" width="1280" height="642" aria-label="Reliable VIO outdoor experimental video with camera observations and trajectory comparisons">
+        <source src="assets/demo.mp4" type="video/mp4">
+        Your browser does not support this video. <a href="assets/demo.mp4">Open the video</a>.
+      </video>
+    </section>
+    <section id="scenes" class="wide scene-section" aria-labelledby="scenes-heading">
+      <h2 id="scenes-heading">Experimental scenes</h2>
+      <div class="scene-grid">
+        <figure>
+          <a href="assets/classroom.png" target="_blank" rel="noopener noreferrer" aria-label="Open the indoor scene"><img src="assets/classroom.png" width="1073" height="800" loading="lazy" decoding="async" alt="An indoor experimental scene with examples of motion blur and complex illumination."></a>
+          <figcaption>Indoor scene</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/campus.png" target="_blank" rel="noopener noreferrer" aria-label="Open the outdoor scene"><img src="assets/campus.png" width="1539" height="903" loading="lazy" decoding="async" alt="A campus route with examples of changing shadows, dynamic objects, motion blur, distant landmarks, and repetitive textures."></a>
+          <figcaption>Outdoor scene</figcaption>
+        </figure>
       </div>
-      <div class="profile-summary">
-        <h2 id="profile-name">Yiyang Tang</h2>
-        <p class="profile-detail profile-role"><span id="profile-role">PhD Student</span></p>
-        <p class="profile-detail profile-affiliation"><span id="profile-affiliation">Harbin Engineering University</span></p>
-        <p class="profile-detail profile-tagline"><span id="profile-tagline">Robotic perception, SLAM &amp; navigation in dynamic environments.</span></p>
-        <p class="profile-detail profile-location"><svg class="detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="profile-location">Harbin, Heilongjiang, China</span></p>
-        <ul class="profile-links" id="profile-links" aria-label="Contact and academic profiles">
-          <li><a href="mailto:tangyiyang@hrbeu.edu.cn" aria-label="Email Yiyang Tang at tangyiyang@hrbeu.edu.cn"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 5l9 7 9-7"/></svg><span>Email</span></a></li>
-          <li><a href="https://github.com/YiyangTang521" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/></svg><span>GitHub</span></a></li>
-        </ul>
-        <p class="profile-pending" id="profile-links-empty" hidden>Contact &amp; academic profiles<br>to be added.</p>
-      </div>
-    </aside>
-
-    <main id="main">
-      <section class="about-section" id="about" aria-labelledby="about-title">
-        <h1 id="about-title">About Me</h1>
-        <div class="biography" id="biography">
-          <p>I am a PhD student at Harbin Engineering University, advised by <a href="https://ieeecss.org/contact/yulong-huang" target="_blank" rel="noopener noreferrer">Prof. Yulong Huang</a>. His research focuses on state estimation and filtering theory, and he serves as an Associate Editor of IEEE Transactions on Automatic Control and IEEE Transactions on Automation Science and Engineering.</p>
-          <p>My research focuses on robotic perception, navigation, and decision-making. I am particularly interested in enabling robots to accomplish navigation tasks safely and efficiently in dynamic environments.</p>
-          <p>Specifically, I study robust perception and SLAM under complex dynamic disturbances, as well as navigation and decision-making for challenging tasks such as target following.</p>
-        </div>
-        <div class="draft-note" id="draft-note" hidden><span class="draft-label">DRAFT</span><p>Profile information is being updated.</p></div>
-      </section>
-
-      <section id="research" class="content-section" aria-labelledby="research-title">
-        <h2 id="research-title" class="section-heading"><span class="section-icon" aria-hidden="true">🔬</span> Research Interests</h2>
-        <div class="research-list" id="research-list">
-          <article class="research-item"><img src="assets/slam.svg" width="248" height="156" alt="Concept illustration of a camera trajectory and mapped landmarks"><div><h3>Robust perception &amp; SLAM</h3><p>Developing reliable perception and localization under complex dynamic disturbances, with an emphasis on robust state estimation and spatial understanding.</p></div></article>
-          <article class="research-item"><img src="assets/navigation.svg" width="248" height="156" alt="Concept illustration of alternative robot paths around moving obstacles"><div><h3>Navigation in dynamic environments</h3><p>Studying how robots can complete navigation tasks safely and efficiently while adapting to moving obstacles and changing surroundings.</p></div></article>
-          <article class="research-item"><img src="assets/following.svg" width="248" height="156" alt="Concept illustration of a robot following a target around an obstacle"><div><h3>Target following &amp; decision-making</h3><p>Exploring navigation and decision-making for demanding tasks such as target following in complex, dynamic environments.</p></div></article>
-        </div>
-      </section>
-
-      <section id="news" class="content-section" aria-labelledby="news-title" hidden>
-        <h2 id="news-title" class="section-heading"><span class="section-icon" aria-hidden="true">🔥</span> News</h2>
-        <ul id="news-list" class="news-list"></ul>
-        <p id="news-empty" class="empty-note">Research updates and announcements will appear here.</p>
-      </section>
-
-      <section id="publications" class="content-section" aria-labelledby="publications-title">
-        <h2 id="publications-title" class="section-heading"><span class="section-icon" aria-hidden="true">📝</span> Selected Publications</h2>
-        <div class="publication-filters" id="publication-filters" role="group" aria-label="Filter publications by topic" hidden></div>
-        <p id="publication-status" class="sr-only" role="status" aria-live="polite"></p>
-        <div id="publication-list" class="publication-list">
-          <article class="publication with-preview">
-            <div class="publication-media">
-              <div class="publication-gallery">
-                <a class="publication-thumbnail" href="visual-semantic-lo/assets/large-occlusion.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Figure 1(a)"><img src="visual-semantic-lo/assets/large-occlusion.png" width="603" height="408" loading="lazy" alt="Figure 1(a): visual segmentation identifies a large nearby vehicle and removes missed dynamic points, shown in red."></a>
-                <div class="publication-thumbnail preview-media"><a href="visual-semantic-lo/" aria-label="View the visual semantic-assisted LiDAR odometry project page"><img src="visual-semantic-lo/assets/long-range.png" width="606" height="411" loading="lazy" alt="Figure 1(b): visual segmentation identifies a distant vehicle and its dynamic LiDAR points missed by 3D detection."></a></div>
-              </div>
-            </div>
-            <div class="publication-body">
-              <h3><a href="visual-semantic-lo/">A LiDAR Odometry with Visual Semantic Segmentation-Assisted Dynamic Object Removal</a></h3>
-              <p class="publication-authors"><strong>Yiyang Tang</strong>, Runbo Guo, Yichen Yu, Hanxuan Zhang</p>
-              <p class="publication-venue">IEEE International Conference on Electronic Engineering and Information Systems (EEiSS) · 2026</p>
-              <p class="publication-description">Visual semantic segmentation and two-stage verification remove dynamic points missed by LiDAR detection while preserving valid static measurements.</p>
-              <div class="publication-links"><a href="visual-semantic-lo/">Project page</a><a href="visual-semantic-lo/assets/paper.pdf">PDF</a><a href="https://ieeexplore.ieee.org/document/11584613" target="_blank" rel="noopener noreferrer">IEEE</a><a href="visual-semantic-lo/#citation">BibTeX</a></div>
-            </div>
-          </article>
-          <article class="publication with-preview">
-            <div class="publication-media">
-              <div class="publication-gallery">
-                <a class="publication-thumbnail" href="camsckf/assets/figure-1.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Figure 1"><img src="camsckf/assets/figure-1.png" width="1170" height="1100" loading="lazy" alt="Figure 1 of the paper: feature-point noise distributions under different observation distances, viewpoints, and lighting conditions."></a>
-                <div class="publication-thumbnail preview-media"><a href="camsckf/" aria-label="View the CAMSCKF project page"><img src="camsckf/assets/preview-poster.jpg" width="640" height="360" loading="lazy" alt="CAMSCKF experimental demonstration with trajectory comparisons, estimated measurement noise, and onboard camera footage."></a></div>
-              </div>
-            </div>
-            <div class="publication-body">
-              <h3><a href="camsckf/">CAMSCKF: A Multi-State Constraint Kalman Filter with Adaptive Multivariate Noise Parameters Clustering and Estimation for Visual-Inertial Odometry</a></h3>
-              <p class="publication-authors"><strong>Yiyang Tang</strong>, Hanxuan Zhang, Yichen Yu, Xiaofeng Li, Yulong Huang</p>
-              <p class="publication-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) · 2025</p>
-              <p class="publication-description">Adaptive measurement clustering and per-cluster noise estimation for visual-inertial odometry in challenging outdoor environments.</p>
-              <div class="publication-links"><a href="camsckf/">Project page</a><a href="camsckf/assets/paper.pdf">PDF</a><a href="https://ieeexplore.ieee.org/document/11246963" target="_blank" rel="noopener noreferrer">IEEE</a><a href="camsckf/#video">Video</a><a href="camsckf/#citation">BibTeX</a></div>
-            </div>
-          </article>
-        </div>
-        <p id="publications-empty" class="empty-note" hidden>Selected papers will be added here soon.</p>
-      </section>
-
-      <section id="under-review" class="content-section" aria-labelledby="under-review-title">
-        <h2 id="under-review-title" class="section-heading"><span class="section-icon" aria-hidden="true">📄</span> Work Under Review</h2>
-        <article class="publication with-preview">
-          <div class="publication-media">
-            <div class="publication-gallery vio-gallery">
-              <a class="publication-thumbnail" href="robust-vio/#scenes" aria-label="View the experimental scenes"><img src="robust-vio/assets/campus.png" width="1539" height="903" loading="lazy" alt="An outdoor campus scene with several visual disturbances."></a>
-              <div class="publication-thumbnail preview-media" data-animated-preview>
-                <a href="robust-vio/assets/trajectory-preview-compact.gif" target="_blank" rel="noopener noreferrer" aria-label="Open the larger animated trajectory comparison in a new tab"><img src="robust-vio/assets/trajectory-poster-compact.jpg" data-animation-src="robust-vio/assets/trajectory-preview-compact.gif" data-poster-src="robust-vio/assets/trajectory-poster-compact.jpg" width="513" height="301" loading="lazy" decoding="async" alt="Reliable VIO outdoor experiment with camera observations above and enhanced VINS-mono and Ours trajectory views side by side below."></a>
-                <button class="preview-toggle" type="button" aria-label="Play Reliable VIO experimental preview" hidden><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></button>
-              </div>
-            </div>
-          </div>
-          <div class="publication-body">
-            <h3><a href="robust-vio/">Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning</a></h3>
-            <p class="publication-authors"><strong>Yiyang Tang</strong>, Hanxuan Zhang, Yiming Chen, Xiaofeng Li, Chao Xue and Yulong Huang</p>
-            <p class="publication-venue">IEEE Transactions on Robotics · Second-round review (unpublished)</p>
-            <p class="publication-description">Robust visual–inertial odometry designed for challenging environments with multiple concurrent disturbances, including illumination changes, motion blur, and texture variations.</p>
-            <div class="publication-links"><a href="robust-vio/">Project page</a></div>
-          </div>
-        </article>
-      </section>
-
-      <section id="submit-soon" class="content-section" aria-labelledby="submit-soon-title">
-        <h2 id="submit-soon-title" class="section-heading"><span class="section-icon" aria-hidden="true">📄</span> Submit Soon</h2>
-        <article class="publication with-preview">
-          <div class="publication-media">
-            <div class="publication-gallery following-gallery">
-              <div class="following-key" aria-label="Method key shared by both demonstrations"><span>Rule-based planner</span><span class="following-ours">Ours · Hybrid-policy RL</span></div>
-              <div class="publication-thumbnail preview-media" data-animated-preview data-preview-label="target-following comparison, scenario 1">
-                <a href="assets/target-following/scene-1-labeled.gif" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size labeled target-following comparison for scenario 1"><img src="assets/target-following/scene-1-clean-poster.png" data-animation-src="assets/target-following/scene-1-clean.gif" data-poster-src="assets/target-following/scene-1-clean-poster.png" width="960" height="464" loading="lazy" decoding="async" alt="Scenario 1: traditional rule-based planner on the left and our hybrid-policy RL model on the right, following a pedestrian around obstacles."></a>
-                <button class="preview-toggle" type="button" aria-label="Play target-following comparison, scenario 1" hidden><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></button>
-              </div>
-              <div class="publication-thumbnail preview-media" data-animated-preview data-preview-label="target-following comparison, scenario 2">
-                <a href="assets/target-following/scene-2-clean.gif" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size animated target-following comparison for scenario 2"><img src="assets/target-following/scene-2-clean-poster.png" data-animation-src="assets/target-following/scene-2-clean.gif" data-poster-src="assets/target-following/scene-2-clean-poster.png" width="960" height="464" loading="lazy" decoding="async" alt="Scenario 2: traditional rule-based planner on the left and our hybrid-policy RL model on the right, using the same method columns as the first comparison."></a>
-                <button class="preview-toggle" type="button" aria-label="Play target-following comparison, scenario 2" hidden><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></button>
-              </div>
-            </div>
-          </div>
-          <div class="publication-body">
-            <h3>Safe Target Following with Ackermann-Steered Robots via Hybrid Planning and Reinforcement Learning</h3>
-            <p class="publication-venue">Submit Soon · Unpublished</p>
-            <p class="publication-description">Pedestrian following for mobile robots in complex, obstacle-rich environments, explicitly accounting for chassis motion constraints to improve the safety, continuity, and adaptability of autonomous following.</p>
-          </div>
-        </article>
-      </section>
-
-      <section id="services" class="content-section" aria-labelledby="services-title">
-        <h2 id="services-title" class="section-heading"><span class="section-icon" aria-hidden="true">🎓</span> Services and Activities</h2>
-        <div class="services-layout">
-          <a class="service-certificate" href="assets/tim-outstanding-reviewer-2025.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the IEEE TIM 2025 outstanding reviewer certificate as a PDF in a new tab"><img src="assets/tim-outstanding-reviewer-2025.png" width="1400" height="1082" loading="lazy" decoding="async" alt="IEEE certificate recognizing Yiyang Tang as one of the Transactions on Instrumentation and Measurement Outstanding Reviewers of 2025."></a>
-          <ul id="service-list" class="service-list">
-            <li><strong>Journal Reviewer: </strong>IEEE Transactions on Instrumentation and Measurement (TIM); IEEE Sensors Journal (SJ); IEEE Transactions on Aerospace and Electronic Systems (TAES).</li>
-            <li><strong>Conference Reviewer: </strong>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).</li>
-            <li><strong>Honor: </strong>Outstanding Reviewer of 2025, IEEE Transactions on Instrumentation and Measurement (TIM).</li>
-          </ul>
-        </div>
-        <p id="services-empty" class="empty-note" hidden>Editorial, reviewing, and community activities will be added here.</p>
-      </section>
-
-      <section id="contact" class="content-section contact-section" aria-labelledby="contact-title">
-        <h2 id="contact-title" class="section-heading"><span class="section-icon" aria-hidden="true">✉️</span> Contact</h2>
-        <p id="contact-description">For research inquiries and collaboration, please get in touch by email.</p>
-        <p><a id="contact-email" href="mailto:tangyiyang@hrbeu.edu.cn">tangyiyang@hrbeu.edu.cn</a></p>
-      </section>
-      <footer class="site-footer"><span>© <span id="copyright-year">2026</span> <span id="footer-name">Yiyang Tang</span></span><a href="#about">Back to top <span aria-hidden="true">↑</span></a></footer>
-      <noscript><p class="noscript-note">Profile and publication information are available without JavaScript. Enable JavaScript for animated previews and citation tools.</p></noscript>
-    </main>
-  </div>
-  <dialog id="bibtex-dialog" aria-labelledby="bibtex-title"><div class="dialog-header"><h2 id="bibtex-title">BibTeX citation</h2><button id="close-bibtex" type="button" aria-label="Close citation">×</button></div><pre id="bibtex-content" tabindex="0"></pre><button class="email-button" id="copy-bibtex" type="button">Copy citation</button><p id="copy-status" role="status" aria-live="polite"></p></dialog>
+    </section>
+  </main>
+  <footer class="project-footer"><a href="../#under-review">← Back to Yiyang Tang’s homepage</a></footer>
 </body>
 </html>
