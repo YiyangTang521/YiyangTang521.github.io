@@ -37,6 +37,7 @@
 - `robust-vio/index.html`：Reliable VIO 在审研究介绍页，仅展示实验视频和室内、室外示意图。
 - `robust-vio/assets/`：实验 MP4、首页 GIF 及静帧、视频封面和两张场景图。
 - `assets/preview.js`：在审研究 GIF 的播放/暂停和减少动态效果设置。
+- `assets/target-following/`：拟投稿行人跟随工作的两张标注对比 GIF 与静帧。
 - `.nojekyll`：让 GitHub Pages 直接发布静态文件。
 
 以上路径对应下载 ZIP 解压后的结构。在开发目录里，网页文件位于 `dist/`。无需安装依赖或编译。
@@ -85,6 +86,7 @@
 - 正式论文链接：https://ieeexplore.ieee.org/document/11584613
 - DOI：10.1109/EEISS69782.2026.11584613
 - 会议：2026 3rd International Conference on Electronic Engineering and Information Systems (EEISS)，页码 1–6。出版元数据依据 Crossref 的 IEEE 登记记录。
+- 页面展示的会议名称按本人要求使用 “IEEE International Conference on Electronic Engineering and Information Systems (EEiSS)”，论文页简写为 “IEEE EEiSS 2026”。
 - 作者：Yiyang Tang、Runbo Guo、Yichen Yu、Hanxuan Zhang；Hanxuan Zhang 为通讯作者，依据提供的 PDF。
 - 原始论文 PDF 和证书 PDF 均保持不变；图像直接提取自论文中的嵌入图像，未改写图内数据。
 - 附件证书虽在文件名中写有“最佳论文奖”，正文仅确认 Yiyang Tang 在 EEiSS 2026 作口头报告，时间为 2026 年 4 月 24–26 日、地点为无锡。网站按正文展示为口头报告证明，没有声称最佳论文奖。
@@ -93,11 +95,21 @@
 
 ## 在审研究介绍页
 
-`/robust-vio/` 根据本人后续明确要求，使用原稿完整题目 “Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning”，首页条目与项目页标题保持一致。简介说明该鲁棒 VIO 面向光照变化、运动模糊、纹理变化等多重干扰同时存在的挑战性环境；明确标注 IEEE Transactions on Robotics 在审、尚未发表。主体仅展示实验视频和室内、室外示意图，移除仿真曲线、问题介绍和结论段落。首页在 Selected Publications 之后以独立的 Work Under Review 栏目链接该页，导航顺序一致；该条目直接维护在 `index.html`，不进入已发表论文列表或其分类统计。
+作者名单按本人 2026-10-16 提供的顺序展示：Yiyang Tang, Hanxuan Zhang, Yiming Chen, Xiaofeng Li, Chao Xue and Yulong Huang。首页和论文介绍页一致，并加粗 Yiyang Tang。
+
+`/robust-vio/` 根据本人后续明确要求，使用原稿完整题目 “Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning”，首页条目与项目页标题保持一致。简介说明该鲁棒 VIO 面向光照变化、运动模糊、纹理变化等多重干扰同时存在的挑战性环境；根据本人 2026-10-16 的更新，首页与项目页均明确标注 IEEE Transactions on Robotics 第二轮审稿、尚未发表。主体仅展示实验视频和室内、室外示意图，移除仿真曲线、问题介绍和结论段落。首页在 Selected Publications 之后以独立的 Work Under Review 栏目链接该页，导航顺序一致；该条目直接维护在 `index.html`，不进入已发表论文列表或其分类统计。
 
 首页左图为室外示意图，右图为从本人提供的视频 52–60 秒截取的实验 GIF。上方展示相机画面，下方并排展示 VINS-mono 和 Ours 的原始轨迹视图。两组轨迹采用相同大小的固定裁切窗口、缩放和像素增强参数，去除暗背景、提高原有轨迹像素的亮度与线宽；未重新描绘路径、添加样本或改变播放速度。图内仅保留两组方法名称，无额外图下注释。尺寸为 513 × 301，与左侧 1539 × 903 的室外图宽高比完全相同；两图以相同宽高比显示，实际顶部与底部对齐。轨迹面板收紧固定裁切窗口，压缩黑色背景留白，保留两组轨迹相同的缩放和增强参数。10 fps，8 秒循环；首页全部论文使用统一的较宽图片列，支持点击查看原尺寸 GIF，保留暂停和减少动态效果设置。论文页保留视频的完整对比画面及音轨，视频长度约 1 分 16 秒，转码为 1280 × 642 H.264 并启用渐进播放。
 
 本项目与下载包中不包含这份在审稿件的原始 PDF、摘要、方法框架、公式推导、参数学习细节、源代码或补充材料，也不提供相关下载链接。以后更新时继续遵守此内容范围。介绍页设置了搜索引擎 `noindex` 提示；这不构成访问控制，网页内容本身仍可公开访问。
+
+## Submit Soon
+
+研究兴趣栏目保留原有内容与插图。在已发表论文与 Work Under Review 之后新增独立 Submit Soon 栏目，展示 “Safe Target Following with Ackermann-Steered Robots via Hybrid Planning and Reinforcement Learning”，明确标为拟投稿、未发表。简介说明该研究面向复杂障碍环境中的移动机器人行人跟随任务，考虑底盘运动约束，以提升自主跟随的安全性、连续性和环境适应能力。
+
+左侧并排展示本人提供的 `Kazam_screencast_00010.mp4` 与 `Kazam_screencast_00011.mp4` 制作的两张对比 GIF。每个演示内部均保持左侧传统规则规划器基线、右侧 Ours 混合策略强化学习模型；顶部只保留一行共用图例 “Rule-based planner / Ours · Hybrid-policy RL”。首页两图均使用 960 × 464 的无重复标题栏预览；第一组的独立放大链接仍保留完整方法标注。两组场景采用相同裁切窗口和缩放比例，保留原始轨迹、场景内容和播放速度。
+
+封面改用与紧邻上方 T-RO 条目完全相同的双列网格、10 像素间距及 513:301 单格比例，因此在相同视口下整体封面高度一致。共用图例覆盖在封面内部，不增加外框高度；两组画面顶端与底端保持一致。所有论文条目继续共用等宽图文两列和顶端对齐规则，拟投稿论文标题保留蓝色。支持点击原尺寸查看、独立播放/暂停与减少动态效果设置。页面仅展示用户提供的标题、任务简介和仿真对比，不补充未经提供的作者列表、投稿期刊、结果数字或方法细节；原始 MP4 不包含在发布文件与下载包中。
 
 ## Services and Activities
 
