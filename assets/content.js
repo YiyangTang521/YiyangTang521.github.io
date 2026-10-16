@@ -124,7 +124,11 @@ window.SITE_CONTENT = {
       bibtex: "@inproceedings{tang2025camsckf,\n  author    = {Tang, Yiyang and Zhang, Hanxuan and Yu, Yichen and\n               Li, Xiaofeng and Huang, Yulong},\n  title     = {{CAMSCKF}: A Multi-State Constraint Kalman Filter\n               with Adaptive Multivariate Noise Parameters\n               Clustering and Estimation for Visual-Inertial Odometry},\n  booktitle = {2025 IEEE/RSJ International Conference on\n               Intelligent Robots and Systems (IROS)},\n  year      = {2025},\n  pages     = {15173--15180},\n  doi       = {10.1109/IROS60139.2025.11246963}\n}"
     }
   ],
-  // Example: { role: "Journal Reviewer", detail: "Confirmed journal names" }
-  services: [],
+  // Reviewing service supplied by the author; 2025 recognition verified against the certificate.
+  services: [
+    { role: "Journal Reviewer", detail: "IEEE Transactions on Instrumentation and Measurement (TIM); IEEE Sensors Journal (SJ); IEEE Transactions on Aerospace and Electronic Systems (TAES)." },
+    { role: "Conference Reviewer", detail: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)." },
+    { role: "Honor", detail: "Outstanding Reviewer of 2025, IEEE Transactions on Instrumentation and Measurement (TIM)." }
+  ],
   contactText: "For research inquiries and collaboration, please get in touch by email."
 };

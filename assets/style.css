@@ -87,15 +87,17 @@ h1 { margin: 0 0 18px; font-size: 28px; line-height: 1.3; }
 .publication-filters button[aria-pressed=true] { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 .publication { margin-bottom: 27px; }
 .publication:last-child { margin-bottom: 0; }
-.publication.with-preview { display: grid; grid-template-columns: minmax(200px,30%) minmax(0,1fr); gap: 32px; align-items: start; }
+.publication.with-preview, .services-layout { display: grid; grid-template-columns: minmax(0,50%) minmax(0,1fr); gap: 28px; align-items: start; }
+.services-layout { grid-template-columns: minmax(0,320px) minmax(0,1fr); }
 .publication-body { min-width: 0; }
 .publication h3 a { text-decoration: none; }
 .publication h3 a:hover { text-decoration: underline; }
 .publication-media { padding: 0; }
 .publication-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; align-items: stretch; }
 .publication-thumbnail { position: relative; display: block; min-width: 0; min-height: 0; aspect-ratio: 4 / 3; overflow: hidden; background: #fff; }
+.vio-gallery .publication-thumbnail { aspect-ratio: 513 / 301; }
 .publication-thumbnail > a { display: block; width: 100%; height: 100%; }
-.publication-thumbnail img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+.publication-thumbnail img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
 .preview-media { position: relative; }
 .preview-toggle { position: absolute; right: 4px; bottom: 4px; display: grid; place-items: center; width: 28px; height: 28px; padding: 5px; border: 1px solid #d9dfe5; border-radius: 50%; background: #fffffff0; color: #354455; }
 .preview-toggle .link-icon { width: 15px; height: 15px; stroke-width: 2.5; }
@@ -107,6 +109,12 @@ h1 { margin: 0 0 18px; font-size: 28px; line-height: 1.3; }
 .publication-links a, .publication-links button { padding: 0; border: 0; background: none; color: var(--link); font-size: 18px; text-decoration: underline; text-underline-offset: 2px; }
 .publication-links a:before, .publication-links button:before { content: '['; color: var(--text); }
 .publication-links a:after, .publication-links button:after { content: ']'; color: var(--text); }
+.service-certificate { display: block; min-width: 0; width: 100%; max-width: 320px; border: 1px solid var(--line); }
+.service-certificate img { width: 100%; height: auto; }
+.services-layout .service-list { min-width: 0; margin: 0; padding: 0; list-style: none; }
+.services-layout .service-list li { padding: 0; margin-bottom: 18px; }
+.services-layout .service-list li:last-child { margin-bottom: 0; }
+.services-layout .service-list strong { display: block; margin-bottom: 4px; }
 .contact-section p { margin: 0 0 12px; }
 #contact-email { overflow-wrap: anywhere; }
 .site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 25px; margin-top: 42px; padding: 20px 0 28px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
@@ -129,9 +137,19 @@ dialog pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; li
   .header-inner { padding: 0 32px; }
   .page-layout { padding: 36px 32px 0; grid-template-columns: 235px minmax(0,1fr); gap: 40px; }
   .portrait-wrap, .portrait { width: 190px; height: 190px; }
-  .research-item, .publication.with-preview { grid-template-columns: minmax(180px,30%) minmax(0,1fr); gap: 25px; }
+  .research-item { grid-template-columns: minmax(180px,30%) minmax(0,1fr); gap: 25px; }
+}
+@media (max-width: 1100px) {
+  .publication.with-preview, .services-layout { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .publication-media { width: 100%; max-width: 680px; }
 }
 @media (max-width: 900px) {
+  .header-inner { min-height: 58px; flex-wrap: wrap; justify-content: flex-end; }
+  .menu-toggle:not([hidden]) { display: flex; font-size: 16px; }
+  .primary-nav { width: 100%; gap: 6px 22px; padding-bottom: 12px; flex-wrap: wrap; }
+  .primary-nav a { padding: 7px 0; font-size: 16px; }
+  .js-ready .primary-nav { display: none; }
+  .js-ready .primary-nav.is-open { display: flex; }
   .page-layout { grid-template-columns: minmax(0,1fr); gap: 0; }
   .profile { position: static; display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 28px; padding-bottom: 30px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
   .portrait-wrap, .portrait { width: 150px; height: 150px; }
@@ -140,17 +158,12 @@ dialog pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; li
   .profile-tagline { margin-bottom: 16px; }
   .profile-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
   .profile-links li { margin: 0; }
-  .research-item, .publication.with-preview { grid-template-columns: minmax(180px,32%) minmax(0,1fr); }
+  .research-item { grid-template-columns: minmax(180px,32%) minmax(0,1fr); }
 }
 @media (max-width: 600px) {
   html { scroll-padding-top: 80px; }
   body { font-size: 16px; }
-  .header-inner { min-height: 58px; padding: 0 20px; flex-wrap: wrap; justify-content: flex-end; }
-  .menu-toggle:not([hidden]) { display: flex; font-size: 16px; }
-  .primary-nav { width: 100%; gap: 6px 22px; padding-bottom: 12px; flex-wrap: wrap; }
-  .primary-nav a { padding: 7px 0; font-size: 16px; }
-  .js-ready .primary-nav { display: none; }
-  .js-ready .primary-nav.is-open { display: flex; }
+  .header-inner { padding: 0 20px; }
   .page-layout { padding: 25px 20px 0; }
   .profile { grid-template-columns: 112px minmax(0,1fr); gap: 20px; padding-bottom: 26px; margin-bottom: 25px; }
   .portrait-wrap, .portrait { width: 112px; height: 112px; }
@@ -167,7 +180,7 @@ dialog pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; li
   .section-heading { font-size: 24px; padding-bottom: 10px; margin-bottom: 16px; }
   .section-icon { font-size: 23px; }
   .research-item { grid-template-columns: minmax(0,1fr); gap: 15px; margin-bottom: 25px; }
-  .publication.with-preview { grid-template-columns: minmax(0,1fr); gap: 15px; }
+  .publication.with-preview, .services-layout { grid-template-columns: minmax(0,1fr); gap: 15px; }
   .publication-media { max-width: 460px; padding-top: 0; }
   .research-item img { max-width: 460px; }
   .research-item > div { padding: 0; }

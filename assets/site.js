@@ -223,6 +223,7 @@
   const services = Array.isArray(data.services) ? data.services : [];
   showSection('services', !data.hideEmptySections || services.length > 0);
   $('services-empty').hidden = services.length > 0;
+  $('service-list').replaceChildren();
   for (const entry of services) { const li = make('li'); li.append(make('strong', '', `${entry.role}: `), document.createTextNode(entry.detail || '')); $('service-list').append(li); }
 
   $('close-bibtex').addEventListener('click', () => dialog.close());
