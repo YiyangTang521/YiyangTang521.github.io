@@ -68,7 +68,7 @@ window.SITE_CONTENT = {
         "Hanxuan Zhang"
       ],
       "highlightAuthor": "Yiyang Tang",
-      "venue": "3rd International Conference on Electronic Engineering and Information Systems (EEiSS)",
+      "venue": "IEEE International Conference on Electronic Engineering and Information Systems (EEiSS)",
       "year": "2026",
       "topic": "LiDAR Odometry",
       "description": "Visual semantic segmentation and two-stage verification remove dynamic points missed by LiDAR detection while preserving valid static measurements.",
