@@ -17,7 +17,7 @@
 
 页面根据本人提供的参考截图统一重排：白底、Arial/Helvetica 无衬线字体、深灰正文、蓝色链接；左侧个人信息，右侧连续排列简介、研究方向、论文和联系方式。正文与侧栏保持一致字号，栏目使用粗体标题和浅色分隔线，研究条目使用统一的左图右文布局。已移除装饰性标签、编号和重复口号。
 
-头像使用本人 GitHub 账号 YiyangTang521 的头像，并保存在 `assets/github-avatar.jpg`。顶部姓名标识保持移除；侧栏保留位置、邮箱与 GitHub 图标，栏目标题使用简洁图标。论文区左侧仅展示论文 Fig. 1 和实验 GIF，两幅图并排放入等宽、等高的容器，使用统一间距且没有额外图下注释、标题栏或装饰边框。右侧保留论文标题和资源链接。Fig. 1 可点击放大；GIF 使用图标按钮暂停，并在系统偏好减少动态效果时默认显示静帧。动态和学术服务在没有内容时自动隐藏，添加记录后自动出现。导师的期刊编委任职仅写在简介中，不属于本人的学术服务。
+头像使用本人 GitHub 账号 YiyangTang521 的头像，并保存在 `assets/github-avatar.jpg`。顶部姓名标识保持移除；侧栏保留位置、邮箱与 GitHub 图标，栏目标题使用简洁图标。论文区左侧仅展示论文 Fig. 1 和实验 GIF，两幅图并排放入等宽、等高的容器，使用统一间距且没有额外图下注释、标题栏或装饰边框。在审与已发表论文共用相同的图片列宽、文字起点和间距，图片顶端对齐且保持完整比例；窄屏统一切换为上图下文。右侧保留论文标题和资源链接。Fig. 1 可点击放大；GIF 使用图标按钮暂停，并在系统偏好减少动态效果时默认显示静帧。动态在没有内容时自动隐藏。Services and Activities 栏目已展示审稿服务及 2025 年 IEEE TIM 荣誉。导师的期刊编委任职仅写在简介中，不属于本人的学术服务。
 
 仓库已经创建并启用了 GitHub Pages。当前 GitHub 插件的写入请求曾返回 403，本版本未通过插件上传到该仓库；可以手动上传下列文件。独立网站与 GitHub Pages 分开维护，本次更新保留独立网站现有的公开访问设置。
 
@@ -34,6 +34,9 @@
 - `visual-semantic-lo/index.html`：第二篇论文项目页，包含方法、KITTI 实验、定性消融和引用。
 - `visual-semantic-lo/project.css`、`visual-semantic-lo/project.js`：沿用第一篇版式的样式与引用复制。
 - `visual-semantic-lo/assets/`：论文 PDF、原始示意图、口头报告证明和 BibTeX。
+- `robust-vio/index.html`：Reliable VIO 在审研究介绍页，仅展示实验视频和室内、室外示意图。
+- `robust-vio/assets/`：实验 MP4、首页 GIF 及静帧、视频封面和两张场景图。
+- `assets/preview.js`：在审研究 GIF 的播放/暂停和减少动态效果设置。
 - `.nojekyll`：让 GitHub Pages 直接发布静态文件。
 
 以上路径对应下载 ZIP 解压后的结构。在开发目录里，网页文件位于 `dist/`。无需安装依赖或编译。
@@ -51,7 +54,7 @@
 ## 上传到已有的 GitHub Pages 仓库
 
 1. 解压 ZIP，进入：https://github.com/YiyangTang521/YiyangTang521.github.io/upload/main
-2. 上传解压后的文件内容到仓库根目录，确保根目录直接包含 `index.html`、`assets/`、`camsckf/`、`visual-semantic-lo/` 和 `.nojekyll`，不要上传外层文件夹或 ZIP 本身。
+2. 上传解压后的文件内容到仓库根目录，确保根目录直接包含 `index.html`、`assets/`、`camsckf/`、`visual-semantic-lo/`、`robust-vio/` 和 `.nojekyll`，不要上传外层文件夹或 ZIP 本身。
 3. 提交到 `main`，等待仓库 Actions 中的 Pages 部署成功。
 4. 访问 https://yiyangtang521.github.io/ 。如仍显示旧页面，可刷新浏览器缓存。
 
@@ -87,6 +90,20 @@
 - 附件证书虽在文件名中写有“最佳论文奖”，正文仅确认 Yiyang Tang 在 EEiSS 2026 作口头报告，时间为 2026 年 4 月 24–26 日、地点为无锡。网站按正文展示为口头报告证明，没有声称最佳论文奖。
 - 当前材料没有第二篇论文的视频；页面使用论文原图，不添加视频占位或仿真内容。
 - 表格完整保留 KITTI 05、07、10 的 ATE RMSE；本文方法分别为 2.35、0.91、2.76 m。DLO 在序列 10 的误差最低，网站保留此结果；DLO 数值来自原论文参考文献 [14]，并在表下注明。
+
+## 在审研究介绍页
+
+`/robust-vio/` 根据本人后续明确要求，使用原稿完整题目 “Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning”，首页条目与项目页标题保持一致。简介说明该鲁棒 VIO 面向光照变化、运动模糊、纹理变化等多重干扰同时存在的挑战性环境；明确标注 IEEE Transactions on Robotics 在审、尚未发表。主体仅展示实验视频和室内、室外示意图，移除仿真曲线、问题介绍和结论段落。首页在 Selected Publications 之后以独立的 Work Under Review 栏目链接该页，导航顺序一致；该条目直接维护在 `index.html`，不进入已发表论文列表或其分类统计。
+
+首页左图为室外示意图，右图为从本人提供的视频 52–60 秒截取的实验 GIF。上方展示相机画面，下方并排展示 VINS-mono 和 Ours 的原始轨迹视图。两组轨迹采用相同大小的固定裁切窗口、缩放和像素增强参数，去除暗背景、提高原有轨迹像素的亮度与线宽；未重新描绘路径、添加样本或改变播放速度。图内仅保留两组方法名称，无额外图下注释。尺寸为 513 × 301，与左侧 1539 × 903 的室外图宽高比完全相同；两图以相同宽高比显示，实际顶部与底部对齐。轨迹面板收紧固定裁切窗口，压缩黑色背景留白，保留两组轨迹相同的缩放和增强参数。10 fps，8 秒循环；首页全部论文使用统一的较宽图片列，支持点击查看原尺寸 GIF，保留暂停和减少动态效果设置。论文页保留视频的完整对比画面及音轨，视频长度约 1 分 16 秒，转码为 1280 × 642 H.264 并启用渐进播放。
+
+本项目与下载包中不包含这份在审稿件的原始 PDF、摘要、方法框架、公式推导、参数学习细节、源代码或补充材料，也不提供相关下载链接。以后更新时继续遵守此内容范围。介绍页设置了搜索引擎 `noindex` 提示；这不构成访问控制，网页内容本身仍可公开访问。
+
+## Services and Activities
+
+已加入期刊审稿经历：IEEE Transactions on Instrumentation and Measurement (TIM)、IEEE Sensors Journal (SJ)、IEEE Transactions on Aerospace and Electronic Systems (TAES)；会议审稿经历：IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)。审稿经历依据本人提供的信息。
+
+2025 年荣誉依据本人提供的 IEEE 证书，证书确认 Yiyang Tang 为 TIM 的 “Outstanding Reviewers of 2025” 之一；页面使用单人称谓 “Outstanding Reviewer of 2025”。栏目左侧展示证书原页预览，点击可打开 `assets/tim-outstanding-reviewer-2025.pdf`；PDF 为本人提供的原文件，未经修改。证书最大显示宽度为 320 像素，桌面采用紧凑的证书左栏和服务介绍右栏，窄屏上下排列。该栏目同时保存在静态 HTML 和 `assets/content.js` 中，无 JavaScript 时也可阅读；动态渲染会替换静态列表，避免重复。
 
 ## 检查与参考
 

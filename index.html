@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/content.js" defer></script>
   <script src="assets/site.js" defer></script>
+  <script src="assets/preview.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,7 +26,8 @@
         <a href="#research">Research</a>
         <a href="#news" hidden>News</a>
         <a href="#publications">Publications</a>
-        <a href="#services" hidden>Services</a>
+        <a href="#under-review">Under Review</a>
+        <a href="#services">Services and Activities</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -118,10 +120,38 @@
         <p id="publications-empty" class="empty-note" hidden>Selected papers will be added here soon.</p>
       </section>
 
-      <section id="services" class="content-section" aria-labelledby="services-title" hidden>
-        <h2 id="services-title" class="section-heading"><span class="section-icon" aria-hidden="true">🎓</span> Academic Service</h2>
-        <ul id="service-list" class="service-list"></ul>
-        <p id="services-empty" class="empty-note">Editorial, reviewing, and community activities will be added here.</p>
+      <section id="under-review" class="content-section" aria-labelledby="under-review-title">
+        <h2 id="under-review-title" class="section-heading"><span class="section-icon" aria-hidden="true">📄</span> Work Under Review</h2>
+        <article class="publication with-preview">
+          <div class="publication-media">
+            <div class="publication-gallery vio-gallery">
+              <a class="publication-thumbnail" href="robust-vio/#scenes" aria-label="View the experimental scenes"><img src="robust-vio/assets/campus.png" width="1539" height="903" loading="lazy" alt="An outdoor campus scene with several visual disturbances."></a>
+              <div class="publication-thumbnail preview-media" data-animated-preview>
+                <a href="robust-vio/assets/trajectory-preview-compact.gif" target="_blank" rel="noopener noreferrer" aria-label="Open the larger animated trajectory comparison in a new tab"><img src="robust-vio/assets/trajectory-poster-compact.jpg" data-animation-src="robust-vio/assets/trajectory-preview-compact.gif" data-poster-src="robust-vio/assets/trajectory-poster-compact.jpg" width="513" height="301" loading="lazy" decoding="async" alt="Reliable VIO outdoor experiment with camera observations above and enhanced VINS-mono and Ours trajectory views side by side below."></a>
+                <button class="preview-toggle" type="button" aria-label="Play Reliable VIO experimental preview" hidden><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="publication-body">
+            <h3><a href="robust-vio/">Robust Visual-Inertial Odometry Based on Gaussian Mixture Noise Modeling and Hierarchical Online Parameter Learning</a></h3>
+            <p class="publication-venue">IEEE Transactions on Robotics · Under review (unpublished)</p>
+            <p class="publication-description">Robust visual–inertial odometry designed for challenging environments with multiple concurrent disturbances, including illumination changes, motion blur, and texture variations.</p>
+            <div class="publication-links"><a href="robust-vio/">Project page</a></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="services" class="content-section" aria-labelledby="services-title">
+        <h2 id="services-title" class="section-heading"><span class="section-icon" aria-hidden="true">🎓</span> Services and Activities</h2>
+        <div class="services-layout">
+          <a class="service-certificate" href="assets/tim-outstanding-reviewer-2025.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the IEEE TIM 2025 outstanding reviewer certificate as a PDF in a new tab"><img src="assets/tim-outstanding-reviewer-2025.png" width="1400" height="1082" loading="lazy" decoding="async" alt="IEEE certificate recognizing Yiyang Tang as one of the Transactions on Instrumentation and Measurement Outstanding Reviewers of 2025."></a>
+          <ul id="service-list" class="service-list">
+            <li><strong>Journal Reviewer: </strong>IEEE Transactions on Instrumentation and Measurement (TIM); IEEE Sensors Journal (SJ); IEEE Transactions on Aerospace and Electronic Systems (TAES).</li>
+            <li><strong>Conference Reviewer: </strong>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).</li>
+            <li><strong>Honor: </strong>Outstanding Reviewer of 2025, IEEE Transactions on Instrumentation and Measurement (TIM).</li>
+          </ul>
+        </div>
+        <p id="services-empty" class="empty-note" hidden>Editorial, reviewing, and community activities will be added here.</p>
       </section>
 
       <section id="contact" class="content-section contact-section" aria-labelledby="contact-title">
